@@ -17,6 +17,12 @@ jobs:
           distribution: temurin
           java-version: '21'
 
+      - name: Verify Java
+        run: |
+          java -version
+          javac -version
+          echo "JAVA_HOME=$JAVA_HOME"
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
